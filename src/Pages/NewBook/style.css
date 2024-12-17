@@ -1,0 +1,58 @@
+.container-principal {
+    min-height: 100vh;
+}
+
+.header-newBook {
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    color: brown;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.3rem;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.secao-form {
+    margin-top: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+    margin-bottom: 2rem;
+}
+
+.form input, select {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
