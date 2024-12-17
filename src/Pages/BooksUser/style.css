@@ -1,0 +1,43 @@
+.container-books-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .secao-books-user {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .secao-books-user h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .secao-books-user h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .avaliacoes-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .assessment-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajuste conforme necessário */
+  }
+  
+  .assessment-card p {
+    margin-bottom: 5px;
+    color: #444;
+  }

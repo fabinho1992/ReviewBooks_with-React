@@ -6,52 +6,43 @@ import { FiArrowLeft, FiTrash2 } from "react-icons/fi";
 import "./style.css";
 
 export default function BooksUser() {
-    const [books, setBooks] = useState([]);
+    const [user, setUser] = useState({});
+    const [assessmentResponses, setAssessmentResponses] = useState([]);
+    const idUser = localStorage.getItem('id');
     const navigate = useNavigate();
 
     useEffect(() => {
-        async function fetchBooks() {
+        async function fetchData() {
             try {
-                const response = await api.get('/api/Book');
-                setBooks(response.data.data);
-                console.log(response.data.data);
+                const response = await api.get(`/api/User/${idUser}`);
+                console.log(response.data);
+                setUser(response.data.data);
+                setAssessmentResponses(response.data.data.assessmentResponses || []);
             } catch (error) {
-                console.error(error);
+                console.error("Erro ao buscar dados:", error);
             }
         }
-        fetchBooks();
-    }, []);
-
-    async function BuscarLivorsUser(id) {
-        try{
-            const response = await api.get(`api/Book?id=${id}`);
-            setBooks(response.data.data);
-            console.log(response.data.data);
-
-        } catch (error) {
-            console.error(error);
-        }
-    }
+        fetchData();
+    }, [idUser]);
 
     return (
         <div className="container-books-user">
-            <div className="livros-usuario">
-                <h1>Meus Livros</h1>
-                {books.map(book => (
-                    <div key={book.id} className="book-card">
-                        <h2>{book.title}</h2>
-                        <p>{book.author}</p>
-                        <p>{book.description}</p>
-                        <p>{book.genre}</p>
-                        <p>{book.isbn}</p>
-                        <p>{book.publisher}</p>
-                        <p>{book.yearPublication}</p>
-                        <p>{book.numberPages}</p>
-                        <Link to={`/editBook/${book.id}`}><FiArrowLeft /></Link>
-                        
+            <div className="secao-books-user">
+                <h1>Minhas Avaliações</h1>
+                <h2>Nome: {user.name}</h2>
+                <h2>Email: {user.email}</h2>
+            </div>
+            <div className="avaliacoes-usuario">
+                {assessmentResponses.map(assessment => (
+                    <div key={assessment.id || assessment.assessmentDate} className="assessment-card">
+                        <p>Livro: {assessment.titleBook}</p>
+                        <p>Nota: {assessment.nota}</p>
+                        <p>Data: {assessment.assessmentDate}</p>
+                        <p>Descrição: {assessment.description}</p>
                     </div>
                 ))}
-            </div>
+            </div>      
         </div>
     );
 }
+       
