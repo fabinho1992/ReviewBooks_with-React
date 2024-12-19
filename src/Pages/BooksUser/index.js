@@ -35,6 +35,7 @@ export default function BooksUser() {
             <div className="avaliacoes-usuario">
                 {assessmentResponses.map(assessment => (
                     <div key={assessment.id || assessment.assessmentDate} className="assessment-card">
+                        <h3>Detalhes da Avaliação</h3>
                         <p>Livro: {assessment.titleBook}</p>
                         <p>Nota: {assessment.nota}</p>
                         <p>Data: {assessment.assessmentDate}</p>

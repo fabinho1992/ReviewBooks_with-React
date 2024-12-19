@@ -4,6 +4,7 @@
     align-items: center;
     padding: 20px;
     font-family: sans-serif;
+    height: 100vh;
   }
   
   .secao-books-user {
@@ -14,6 +15,7 @@
   .secao-books-user h1 {
     font-size: 2em;
     color: #333;
+    margin-bottom: 1rem;
   }
   
   .secao-books-user h2 {
@@ -26,6 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   
   .assessment-card {
@@ -34,10 +37,16 @@
     margin: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Ajuste conforme necessário */
+    width: 300px; 
+    background-color: #fff;
   }
   
   .assessment-card p {
     margin-bottom: 5px;
     color: #444;
+  }
+
+  .assessment-card h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
   }

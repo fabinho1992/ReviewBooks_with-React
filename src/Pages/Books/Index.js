@@ -66,6 +66,7 @@ export default function Books() {
                 {books.map(book => (
                     <div key={book.id} className="book-card">
                         <h2>{book.title}</h2>
+                        <p><strong>Id:</strong> {book.id}</p>
                         <p><strong>Autor:</strong> {book.author}</p>
                         <p><strong>Gênero:</strong> {book.generBook}</p>
                         <p><strong>ISBN:</strong> {book.isbn}</p>

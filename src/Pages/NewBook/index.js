@@ -1,4 +1,4 @@
-import React,  {useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import api from "../../Services/api";
 import { Link } from 'react-router-dom';
@@ -81,9 +81,7 @@ export default function NewBook() {
 
                 </div>
             </main>
-            <footer className="footer">
-                <h3>Desenvolvido por: Fabio dos Santos</h3>
-            </footer>
+
         </div>
 
     );

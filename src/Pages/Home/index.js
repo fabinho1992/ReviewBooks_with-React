@@ -21,6 +21,8 @@ export default function Home() {
                 <button onClick={() => navigate('/newBook')} >Novo Livro</button>
 
                 <button onClick={() => navigate('/books')} >Livros</button>
+
+                <button onClick={() => navigate('/assessmentBook')} >Avaliar Livro</button>
             </div>
 
         </div>
